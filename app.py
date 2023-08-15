@@ -1,17 +1,12 @@
+import pickle
 from flask import Flask, render_template, request
 import tensorflow as tf
-import tensorflow_hub as hub
 import matplotlib
 matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import io
-import base64
-from keras.models import load_model
 import pathlib
-import os
 app = Flask(__name__)
 optimizer = "rmsprop"
-m = tf.keras.models.load_model('./ModelSkinCancerDetection/')
+m = pickle.load(open('model.pkl', 'rb'))
 @app.route('/', methods=['GET'])
 def hello_word():
     return render_template('index.html')
