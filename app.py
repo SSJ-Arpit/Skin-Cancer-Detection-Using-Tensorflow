@@ -9,6 +9,9 @@ import base64
 from keras.models import load_model
 import pathlib
 import os
+tf.saved_model.LoadOptions(
+    experimental_io_device='/job:localhost
+)
 app = Flask(__name__)
 optimizer = "rmsprop"
 m = tf.keras.models.load_model('ModelSkinCancerDetection/')
