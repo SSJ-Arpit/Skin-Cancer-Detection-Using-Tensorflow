@@ -11,7 +11,7 @@ import pathlib
 import os
 app = Flask(__name__)
 optimizer = "rmsprop"
-m = tf.keras.models.load_model('ModelSkinCancerDetection/')
+m = tf.keras.models.load_model('./ModelSkinCancerDetection/')
 @app.route('/', methods=['GET'])
 def hello_word():
     return render_template('index.html')
