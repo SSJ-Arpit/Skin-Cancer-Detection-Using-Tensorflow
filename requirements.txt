@@ -2,6 +2,7 @@ Flask==2.3.2
 tensorflow
 tensorflow_hub
 matplotlib
+gunicorn
 numpy
 pandas
 seaborn
