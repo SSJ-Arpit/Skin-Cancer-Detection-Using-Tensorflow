@@ -10,7 +10,7 @@ from keras.models import load_model
 import pathlib
 import os
 tf.saved_model.LoadOptions(
-    experimental_io_device='/job:localhost
+    experimental_io_device='/job:localhost'
 )
 app = Flask(__name__)
 optimizer = "rmsprop"
