@@ -9,5 +9,5 @@ pandas
 scikit-learn
 scipy
 seaborn
-tensorflow
+tensorflow-cpu
 
